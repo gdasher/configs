@@ -1,0 +1,32 @@
+#command aliases
+alias e="$EDITOR"
+alias -g G '|grep'
+alias gvim "/usr/bin/vim -g -fn 6x13"
+alias vi=vim
+alias m=$PAGER
+alias hi=history
+alias so=source
+alias h='history | egrep '
+if [[ $GNU != "false" ]];then
+  alias ls='ls -F --color=auto'
+else 
+  alias ls='ls -F'
+fi
+alias la='ls -a'
+alias lA='ls -A'
+alias ll='ls -l'
+alias lL='ls -lA'
+alias ltr='ls -ltr'
+alias l='last | tac'
+alias pa='prodaccess -f'
+
+#global aliases
+alias -g me=gdasher
+
+#zmv
+autoload zmv
+alias mmv='noglob zmv -W'
+
+#alias hostnames
+for h in ${${(M)${(f)"$(<$HOME/.ssh/config)"}:#Host *}/Host /};alias $h="ssh $h"
+

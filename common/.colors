@@ -1,0 +1,9 @@
+if [[ $ISTYPE == "" ]]; then
+  ISTYPE=$HOST
+fi
+ 
+case $ISTYPE in
+	gdasher-macbookair)
+	  thismachine=${fg_bold[blue]}
+		;;
+esac
