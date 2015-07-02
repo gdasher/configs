@@ -6,4 +6,7 @@ case $ISTYPE in
 	gdasher-macbookair)
 	  thismachine=${fg_bold[blue]}
 		;;
+  aws1)
+	  thismachine=${fg_bold[yellow]}
+		;;
 esac
